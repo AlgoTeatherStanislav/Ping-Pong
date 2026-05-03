@@ -42,6 +42,8 @@ background = transform.scale(image.load("background.jpg"), (win_w, win_h))
 player_left = Player("racket.png", 5, 10, 36, 143, 10)
 player_right = Player("racket.png", win_w - 41, win_h - 153, 36, 143, 10)
 
+ball = Ball("ball.png", win_w / 2, win_h / 2, 50, 50, 25)
+
 clock = time.Clock()
 FPS = 60
 run = True
@@ -59,6 +61,7 @@ while run:
         window.blit(background, (0, 0))
         player_left.reset()
         player_right.reset()
+        ball.reset()
 
             
     display.update()
